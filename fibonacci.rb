@@ -13,12 +13,13 @@ def fibs(num)
   arr
 end
 
-p fibs(8)
+p fibs(11)
 
 def fib(spot, arr=[], original_spot=spot)
   if spot == 1
     num = 0
   elsif spot == 2
+    arr[spot -2] = 0 unless arr[spot-2]
     num = 1
   else
    num = fib(spot-1, arr, original_spot) + fib(spot-2, arr, original_spot)
@@ -27,4 +28,4 @@ def fib(spot, arr=[], original_spot=spot)
   return arr.length == original_spot ? arr : num
 end
 
-p fib(8)
+p fib(11)
