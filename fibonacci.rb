@@ -15,17 +15,17 @@ end
 
 p fibs(11)
 
-def fib(spot, arr=[], original_spot=spot)
+def fib_rec(spot, arr=[], original_spot=spot)
   if spot == 1
     num = 0
   elsif spot == 2
-    arr[spot -2] = 0 unless arr[spot-2]
+    arr[spot-2] = 0 unless arr[spot-2]
     num = 1
   else
-   num = fib(spot-1, arr, original_spot) + fib(spot-2, arr, original_spot)
+    num = fib_rec(spot-1, arr, original_spot) + fib_rec(spot-2, arr, original_spot)
   end
   arr[spot-1] = num unless arr[spot-1] 
   return arr.length == original_spot ? arr : num
 end
 
-p fib(11)
+p fib_rec(8)

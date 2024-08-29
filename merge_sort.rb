@@ -35,4 +35,4 @@ def merge(arr)
   end
 end
 
-p merge([105, 79, 100, 110, 100, 200])
+p merge([3, 2, 1, 13, 8, 5, 0, 1] )
